@@ -11,7 +11,7 @@ export type Database = {
     Tables: {
       post: {
         Row: {
-          content: string | null
+          content: string
           created_at: string
           id: string
           user_id: string | null
