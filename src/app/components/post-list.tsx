@@ -2,7 +2,7 @@ import PostCard from "./post-card"
 import { type Post } from "@/app/types/posts"
 import { deletePost } from "@/app/actions/delete-post-action"
 
-export function PostList({posts}: { posts: Post[] | null; deletePost: (postId: number) => void }){
+export function PostList({posts}: { posts: Post[] | null; deletePost: (postId: string) => void }){
     return(
         <>
         {

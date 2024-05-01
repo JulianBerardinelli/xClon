@@ -7,7 +7,7 @@ import { IconMessageCircle, IconTrash } from "@tabler/icons-react";
 import { IconHeart } from "@tabler/icons-react";
 import { IconRepeat } from "@tabler/icons-react";
 
-type onDeleteType = (postId: number) => void;
+type onDeleteType = (postId: string) => void;
 export default function PostCard(
     {
         id, userName, avatarUrl,userFullName, content, onDelete
@@ -24,7 +24,6 @@ export default function PostCard(
         onDelete(id);
     };
 
-    const [isFollowed, setIsFollowed] = useState(false);
     return (
         <Card className="shadow-none bg-trasnparent hover:bg-slate-800 transition border-b border-white/20 rounded-none cursor-pointer">
             <CardHeader className="justify-between">

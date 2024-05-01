@@ -4,7 +4,7 @@ import { createServerActionClient } from "@supabase/auth-helpers-nextjs";
 import { revalidatePath } from "next/cache";
 
 
-export const deletePost = async (postId: number) => {
+export const deletePost = async (postId: string) => {
     const supabase = createServerActionClient({cookies});
 
     // Verificar si el usuario está autenticado
