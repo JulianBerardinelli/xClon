@@ -19,8 +19,8 @@ export function ButtonModal({ children }) {
                 body: "py-6",
                 backdrop: "bg-[#1DA1F2]/40 backdrop-opacity-40",
                 base: "border-[#ffff]/35 bg-[black] dark:bg-[#19172c] text-[white]",
-                header: "border-b-[1px] border-[#292f46]",
-                footer: "border-t-[1px] border-[#292f46]",
+                header: "border-b-[1px] border-[#ffff]/35",
+                footer: "border-t-[1px] border-[#ffff]/35",
                 closeButton: "hover:bg-white/5 active:bg-white/10",
               }}
             >
@@ -37,10 +37,12 @@ export function ButtonModal({ children }) {
                                 <img className='size-30' src="./dinosaurio.gif" alt="" />
                             </ModalBody>
                             <ModalFooter>
+                                <a target='_blank' href="https://github.com/JulianBerardinelli/xClon">
                                 <Button color="primary" variant="light" onPress={onClose}>
                                     <GithubIcon />
                                     Colaborar en Github
                                 </Button>
+                                </a>
                                 <Button color="danger" onPress={onClose}>
                                     Cerrar
                                 </Button>

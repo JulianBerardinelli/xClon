@@ -37,7 +37,8 @@ export function MenuList() {
                 <IconClipboardList size={24} />
                 Listas
             </ButtonModal>
-            <button 
+            <button
+             
             className="bg-sky-500 text-md disabled:opacity-40 disabled:pointer-events-none font-bold rounded-full w-full py-2 self-end"
         >
             Postear
