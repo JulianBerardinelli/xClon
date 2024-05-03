@@ -1,3 +1,5 @@
+'use client'
+
 import PostCard from "./post-card"
 import { type Post } from "@/app/types/posts"
 import { deletePost } from "@/app/actions/delete-post-action"
@@ -28,7 +30,7 @@ export function PostList({posts}: { posts: Post[] | null; deletePost: (postId: s
             userName={userName} 
             userFullName={userFullName} 
             avatarUrl={avatarUrl}
-            onDelete={deletePost}/>
+            onDelete={() => deletePost(id)}/>
           )
         })
       }

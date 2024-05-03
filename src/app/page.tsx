@@ -21,10 +21,20 @@ export default async function Home() {
     redirect('/login')
 }
 
-  const { data: posts} = await supabase
-    .from('post')
-    .select('*, user:users(*)')
-    .order('created_at', {ascending: false})
+   const { data: posts} = await supabase
+     .from('post')
+     .select('*, user:users(*)')
+     .order('created_at', {ascending: false})
+  // const { data: posts } = await supabase
+  // .from('post')
+  // .select(`
+  //   id,
+  //   content,
+  //   user_id,
+  //   user:user_id (name, user_name, avatar_url)
+  // `)
+  // .order('created_at', { ascending: false });
+
   return (
     
     <main className="dark grid grid-cols-3 ">
